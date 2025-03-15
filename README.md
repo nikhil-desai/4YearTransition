@@ -22,15 +22,17 @@ Install the package via npm:
 
 ```bash
 npm install 4yeartransition
-Note: Make sure your project uses a compatible version of React if you want to use the React component.
+```
 
-Usage
-React Version
-Import the GenderInput component from the package:
+> Note: Make sure your project uses a compatible version of React if you want to use the React component.
 
-jsx
-Copy
-Edit
+## Usage
+
+### React Version
+
+Import the `GenderInput` component from the package:
+
+```jsx
 import React, { useState } from 'react';
 import { GenderInput } from '4yeartransition';
 
@@ -69,12 +71,13 @@ function App() {
 }
 
 export default App;
-Vanilla JavaScript Version
-You can also use the package in a non-React project. Import the createGenderInput function and attach the generated element to your DOM.
+```
 
-html
-Copy
-Edit
+### Vanilla JavaScript Version
+
+You can also use the package in a non-React project. Import the `createGenderInput` function and attach the generated element to your DOM.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -113,62 +116,89 @@ Edit
   </script>
 </body>
 </html>
-Props and Options
-For the React Component (GenderInput)
-currentParty (string):
-Set the current political party. Accepted values: "republican" or "democrat".
-Default: "republican"
+```
 
-inputType (string):
-Determines the type of input displayed. Options include:
+## Props and Options
 
-"radio"
-"dropdown"
-"buttonGroup"
-democratGenderOptions (array of strings):
-When currentParty is set to "democrat", these options will override the default list.
+### For the React Component (`GenderInput`)
 
-onChange (function, required):
-Callback function that gets called when an option is selected.
+- **`currentParty`** (string):  
+  Set the current political party. Accepted values: "republican" or "democrat".  
+  **Default:** "republican"
 
-customStyles (object):
-An object to override default styling. You can provide styles for:
+- **`inputType`** (string):  
+  Determines the type of input displayed. Options include:
+  - "radio"
+  - "dropdown"
+  - "buttonGroup"
 
-container
-input
-select
-button
-name (string):
-The name attribute for the input elements.
-Default: "gender"
+- **`democratGenderOptions`** (array of strings):  
+  When `currentParty` is set to "democrat", these options will override the default list.
 
-For the Vanilla JS Function (createGenderInput)
+- **`onChange`** (function, required):  
+  Callback function that gets called when an option is selected.
+
+- **`customStyles`** (object):  
+  An object to override default styling. You can provide styles for:
+  - `container`
+  - `input`
+  - `select`
+  - `button`
+
+- **`name`** (string):  
+  The name attribute for the input elements.  
+  **Default:** "gender"
+
+### For the Vanilla JS Function (`createGenderInput`)
+
 Accepts an options object with the same properties as above:
 
-currentParty
-inputType
-democratGenderOptions
-onChange
-customStyles
-name
-Custom Styling
-Both implementations come with default styling that uses red, white, and blue colors. You can override these defaults by passing your own CSS styles via the customStyles prop (React) or option (Vanilla JS).
+- `currentParty`
+- `inputType`
+- `democratGenderOptions`
+- `onChange`
+- `customStyles`
+- `name`
+
+## Custom Styling
+
+Both implementations come with default styling that uses red, white, and blue colors. You can override these defaults by passing your own CSS styles via the `customStyles` prop (React) or option (Vanilla JS).
 
 Example for React:
 
-jsx
-Copy
-Edit
+```jsx
 customStyles={{
   container: { border: '3px solid green' },
   input: { marginRight: '15px' }
 }}
-Testing
-Tests have been written using Jest and React Testing Library for the React component and Jest (with a jsdom environment) for the Vanilla JS implementation. To run tests, use:
+```
 
-bash
-Copy
-Edit
+## Testing
+
+Tests have been written using **Jest** and **React Testing Library** for the React component and **Jest** (with a jsdom environment) for the Vanilla JS implementation. To run tests, use:
+
+```bash
 npm test
-For more details, check the tests directory in the repository.
+```
+
+For more details, check the `tests` directory in the repository.
+
+## Publishing
+
+After making your changes and verifying tests pass, you can publish your package to npm:
+
+1. **Login to npm:**
+   ```bash
+   npm login
+   ```
+2. **Publish your package:**
+   ```bash
+   npm publish
+   ```
+
+Your package will then be available for installation via npm.
+
+## License
+
+[MIT](LICENSE)
 
