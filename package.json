@@ -1,0 +1,47 @@
+{
+  "name": "4yeartransition",
+  "version": "1.0.0",
+  "description": "An NPM package that helps create the right Sex/Gender Form Options Based on the Current US Admin",
+  "keywords": [
+    "Political",
+    "Forms",
+    "Gender",
+    "React",
+    "Javascript"
+  ],
+  "homepage": "https://github.com/nikhil-desai/4YearTransition#readme",
+  "bugs": {
+    "url": "https://github.com/nikhil-desai/4YearTransition/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhil-desai/4YearTransition.git"
+  },
+  "license": "MIT",
+  "author": "Nikhil Designs",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom",
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
